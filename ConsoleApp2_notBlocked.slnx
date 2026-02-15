@@ -1,3 +1,29 @@
-<Solution>
-  <Project Path="ConsoleApp2_notBlocked/ConsoleApp2_notBlocked.csproj" Id="86814e45-9b48-40c0-b1a5-bff4ea378087" />
-</Solution>
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net.NetworkInformation;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            string bin = " "; 
+             int numa= Convert.ToInt32(Console.ReadLine());
+
+            while( numa != 0)
+            {
+                int r = numa % 2;
+                numa = numa / 2; 
+                bin=r+bin;
+            }
+            Console.WriteLine(bin);
+
+
+        }
+    }
+}
